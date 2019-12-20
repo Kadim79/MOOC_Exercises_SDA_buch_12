@@ -6,8 +6,6 @@ public class Ex5_SecondsInYear {
 
         System.out.println("There are "+x+" seconds in a year.");
 
-
-
     }
 
 
