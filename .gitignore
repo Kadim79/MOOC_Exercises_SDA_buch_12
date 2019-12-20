@@ -32,13 +32,3 @@ hs_err_pid*
 .idea/workspace.xml
 mooc_exercitii.iml
 out/production/mooc_exercitii/META-INF/
-src/Ex10_Circle_Circum.java
-src/Ex11_BiggerNumber.java
-src/Ex12_SumAges.java
-src/Ex13_NhlStatistics.java
-src/Ex1_Name.java
-src/Ex5_SecondsInYear.java
-src/Ex6_Addition.java
-src/Ex7_Multiplication.java
-src/Ex8_Adder.java
-src/Ex9_Divider.java
