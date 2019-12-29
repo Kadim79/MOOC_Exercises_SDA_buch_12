@@ -1,3 +1,5 @@
+package mooc.week1;
+
 public class Ex1_Name {
 
     public static void main(String[] args) {

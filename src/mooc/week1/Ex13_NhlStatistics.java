@@ -1,19 +1,41 @@
-//import java.util.Scanner;
-//import nhlstats.NHLStatistics;
-//
-//public class Ex13_NhlStatistics {
-//
-//    public static void main(String[] args) {
-//
-//        Scanner input = new Scanner(System.in);
-//
-//        System.out.println("Top 10 by goals : ");
-//
-//        NHLStatistics.sortByPoints();
-//
-//    }
-//
-//}
+package mooc.week1;
+
+import nhlstats.NHLStatistics;
+
+import java.util.Scanner;
+
+public class Ex13_NhlStatistics {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Top 10 by goals : ");
+
+        NHLStatistics.sortByGoals();
+        NHLStatistics.top(10);
+        System.out.println();
+
+        System.out.println("Top 25 players based on penalty amounts: ");
+        NHLStatistics.sortByPenalties();
+        NHLStatistics.top(25);
+        System.out.println();
+
+        System.out.println("Statics for Sidney Crosby: ");
+        NHLStatistics.searchByPlayer("Sidney Crosby");
+        System.out.println();
+
+        System.out.println("Print statics for Philadelphia Flyers: ");
+        NHLStatistics.teamStatistics("PHI");
+        System.out.println();
+
+        System.out.println("Print the players in Anaheim Ducks: ");
+        NHLStatistics.sortByPoints();
+        NHLStatistics.teamStatistics("ANA");
+
+    }
+
+}
 
 
 //        Create a program that does the following tasks into the main program body.

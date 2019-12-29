@@ -1,3 +1,5 @@
+package mooc.week1;
+
 import java.util.Scanner;
 
 public class Ex7_Multiplication {

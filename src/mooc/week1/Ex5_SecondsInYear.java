@@ -1,3 +1,5 @@
+package mooc.week1;
+
 public class Ex5_SecondsInYear {
 
     public static void main(String[] args) {

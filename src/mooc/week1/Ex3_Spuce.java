@@ -1,3 +1,5 @@
+package mooc.week1;
+
 public class Ex3_Spuce {
 
     public static void main(String[] args) {

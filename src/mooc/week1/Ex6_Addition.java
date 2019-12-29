@@ -1,3 +1,5 @@
+package mooc.week1;
+
 public class Ex6_Addition {
 
     public static void main(String[] args) {

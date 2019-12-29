@@ -1,3 +1,5 @@
+package mooc.week1;
+
 public class Ex4_VaryingVariables {
 
 

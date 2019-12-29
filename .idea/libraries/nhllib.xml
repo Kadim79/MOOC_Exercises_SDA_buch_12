@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="nhllib">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/nhllib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Downloads/nhllib.jar!/" />
+    </SOURCES>
+  </library>
+</component>
