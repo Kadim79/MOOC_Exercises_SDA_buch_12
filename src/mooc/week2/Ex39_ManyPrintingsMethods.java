@@ -3,12 +3,14 @@ package mooc.week2;
 public class Ex39_ManyPrintingsMethods {
 
     public static void main(String[] args) {
+
         printStars(5);
         System.out.println();
         printSquare(5);
         printRectangular(4,3);
-        printLeftSideTriangle(4);
+        printLeftTriangle(4);
     }
+
     private static void printStars(int starNumbers){
 
         for (int i = 0; i <starNumbers ; i++) {
@@ -33,7 +35,8 @@ public class Ex39_ManyPrintingsMethods {
         System.out.println();
     }
 
-    private static void printLeftSideTriangle(int size){
+
+    public static void printLeftTriangle(int size){
 
         System.out.println("Print a left side triangle: ");
         for (int i = 1; i <= size; i++) {
