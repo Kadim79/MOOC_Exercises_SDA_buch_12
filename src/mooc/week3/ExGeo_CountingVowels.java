@@ -67,13 +67,13 @@ public class ExGeo_CountingVowels {
 }
 
 //    Pentru cine vrea sa se joace cu recursivitatea :)) medal of honor ==--+++
+
 //    private static int countOccurences(String someString, char searchedChar, int index) {
+//
 //        if (index >= someString.length()) {
 //            return 0;
 //        }
-//
-//        int count = someString.charAt(index) == searchedChar ? 1 : 0;
-//        return count + countOccurences(
-//                someString, searchedChar, index + 1);
+//    int count = someString.charAt(index) == searchedChar ? 1 : 0;
+//        return count + countOccurences(someString, searchedChar, index + 1);
 //    }
 
