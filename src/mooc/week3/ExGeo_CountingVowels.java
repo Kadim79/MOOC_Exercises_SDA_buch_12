@@ -53,12 +53,11 @@ public class ExGeo_CountingVowels {
     public static int countVowelsOccurrences(String str, char[]c) {
 
         str.toLowerCase();
-        char[] arrayChars = str.toCharArray();
 
         for (char letter:c) {
 
             for (int i = 0; i < str.length(); i++) {
-                if (arrayChars[i]==letter)
+                if (str.toCharArray()[i]==letter)
                     countVowels++;
             }
         }
