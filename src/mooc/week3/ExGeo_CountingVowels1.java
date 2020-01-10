@@ -30,17 +30,9 @@ public class ExGeo_CountingVowels1 {
 
     public static void main(String[] args) {
 
-        String s = "joy";
-
-        while (!s.equalsIgnoreCase("quit")) {
-
-            ExGeo_CountingVowels1 object = new ExGeo_CountingVowels1();
-            System.out.println("Number of vowels occurrences in " +
-                    Arrays.toString(object.arrayOfstrings) + " is --> " + countVowels);
-            System.out.println("\nPlease type 'quit' to exit program!");
-            s = in.nextLine();
-            System.out.println();
-        }
+        ExGeo_CountingVowels1 object = new ExGeo_CountingVowels1();
+        System.out.println("Number of vowels occurrences in " +
+                Arrays.toString(object.arrayOfstrings) + " is --> " + countVowels);
     }
 
     public static void countVowelsOccurrences(String str, char[] c) {

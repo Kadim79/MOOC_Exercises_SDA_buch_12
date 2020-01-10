@@ -16,10 +16,20 @@ public class ExGeo_CountingVowels {
 
     public static void main(String[] args) {
 
-        String[] arraysOfStrings = buildArrayOfStrings();
-        System.out.println("Number of our chars occurrences in " +
-                Arrays.toString(arraysOfStrings) + " is --> " +
-                countVowelsOccurrences(arraysOfStrings,buildArraysOfCharsOccurrences()));
+        String s = "joy";
+
+        while (!s.equalsIgnoreCase("quit")) {
+
+            String[] arraysOfStrings = buildArrayOfStrings();
+
+            System.out.println("Number of our chars occurrences in " +
+               Arrays.toString(arraysOfStrings) + " is --> " +
+               countVowelsOccurrences(arraysOfStrings, buildArraysOfCharsOccurrences()));
+
+            System.out.println("\nPlease type 'quit' to exit program!");
+            s = in.nextLine();
+            System.out.println();
+        }
     }
 
     public static String[] buildArrayOfStrings(){
