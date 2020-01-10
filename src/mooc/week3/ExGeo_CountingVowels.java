@@ -17,7 +17,7 @@ public class ExGeo_CountingVowels {
     public static void main(String[] args) {
 
         String[] arraysOfStrings = buildArrayOfStrings();
-        System.out.println("Numbers of our chars occurrences in " +
+        System.out.println("Number of our chars occurrences in " +
                 Arrays.toString(arraysOfStrings) + " is --> " +
                 countVowelsOccurrences(arraysOfStrings,buildArraysOfCharsOccurrences()));
     }
