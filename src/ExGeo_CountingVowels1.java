@@ -1,5 +1,3 @@
-package mooc.week3;
-
 //Cerinte Problema Geo:
 //Am nevoie de un program, care citeste de la tastatura 5 cuvinte si
 //le pune intr-un array. Dupa asta, acel array este analizat si sunt numarate vocalele.
@@ -12,20 +10,23 @@ import java.util.Scanner;
 
 public class ExGeo_CountingVowels1 {
 
-    static Scanner in = new Scanner(System.in);
+    static Scanner input = new Scanner(System.in);
     static int countVowels = 0;
     static char[] vowels = {'a', 'e', 'i', 'o', 'u'};
     static char[] charOfArrayStrings;
     String[] arrayOfstrings = new String[5];
+    String allWords = "";
 
     public ExGeo_CountingVowels1() {
 
         for (int i = 0; i < arrayOfstrings.length; i++) {
 
             System.out.print("Type the string no." + (i + 1) + " : ");
-            this.arrayOfstrings[i] = in.nextLine();
-            countVowelsOccurrences(arrayOfstrings[i], vowels);
+            this.arrayOfstrings[i] = input.nextLine();
+            allWords += arrayOfstrings[i];
         }
+        System.out.println(allWords);
+        countVowelsOccurrences(allWords,vowels);
     }
 
     public static void main(String[] args) {

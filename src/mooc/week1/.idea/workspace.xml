@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8290b571-a085-41ab-8ce9-18fbf092697a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ex22_Password.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ex23_Temperature/Graph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ex23_Temperature/Temperature.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../week3/EX54_PrintEndPartWord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../week3/Ex51_SeparatingAllChars.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../week3/Ex52_PrintingReverseName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../week3/Ex53_FirstPartWord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../week3/Ex55_WordInWord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../week3/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week2/Ex42_Hangman.java" beforeDir="false" afterPath="$PROJECT_DIR$/../week2/Ex42_Hangman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week3/ExGeo_CountingVowels1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../week3/ExGeo_CountingVowels1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1578246602910</updated>
       <workItem from="1578246608278" duration="24000" />
+      <workItem from="1579023830163" duration="4000" />
     </task>
     <servers />
   </component>

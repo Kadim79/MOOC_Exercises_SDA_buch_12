@@ -1,5 +1,3 @@
-package mooc.week3;
-
 //Cerinte Problema Geo:
 //Am nevoie de un program, care citeste de la tastatura 5 cuvinte si
 //le pune intr-un array. Dupa asta, acel array este analizat si sunt numarate vocalele.
