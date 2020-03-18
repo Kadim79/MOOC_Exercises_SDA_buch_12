@@ -1,0 +1,43 @@
+Exercise 90: Team and Players
+
+23.11 Method returns an object
+
+We've seen methods that return booleans, numbers, lists and strings. It's easy to guess that a method can return any type of an object. Let's make a method for the weight watchers association that returns the person with the highest weight index.
+
+public class WeightWatchersAssociation {
+// ...
+
+public Person personWithHighestWeightIndex() {
+// if members list is empty, we'll return null-reference
+if ( this.members.isEmpty() ) {
+return null;
+}
+
+Person heaviestSoFar = this.members.get(0);
+
+for ( Person person : this.members) {
+if ( person.weightIndex() > heaviestSoFar.weightIndex() ) {
+heaviestSoFar = person;
+}
+}
+
+return heaviestSoFar;
+}
+}
+The logic in this method works in the same way as when finding the largest number in a list. We use a dummy variable heaviestSoFar which is initially made to refer to the first person on the list. After that the list is read through and we see if there's anyone with a greater weight index in it, if so, we make heaviestSoFar refer to that one instead. At the end we return the value of the dummy variable, or in other words the reference to a person object.
+
+Let's make an expansion to the previous main program. The main program receives the reference returned by the method to its variable heaviest.
+
+public static void main(String[] args) {
+WeightWatchersAssociation weightWatcher = new WeightWatchersAssociation("Kumpluan paino", 25);
+
+// ..
+
+Person heaviest = weightWatcher.personWithHighestWeightIndex();
+System.out.print("member with the greatest weight index: " + heaviest.getName() );
+System.out.println(" weight index " + String.format( "%.2f", heaviest.weightIndex() ) );
+}
+Prints:
+
+member with the greatest weight index: Petri
+weight index 37,42

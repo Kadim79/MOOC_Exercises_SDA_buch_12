@@ -1,0 +1,73 @@
+Exercise 92: Difference of two dates
+
+In this assignment we'll further extend the class MyDate. This assignment does not depend on the previous one, so the project contains the MyDate class that does not have the extensions of the previous assignment.
+
+Exercise 92.1: Difference in years, first version
+
+Add to the class MyDate the method public int differenceInYears(MyDate comparedDate), that calculates the difference in years of the object for which the method is called and the object given as parameters.
+
+Note the following
+
+the first vesion of the method is not very precise, it only calculates the difference of the years and does not take into account the day and month of the dates
+The method needs to work only in the case where the date given as parameter is before the date for which the method is called
+With the code
+
+public class Main {
+    public static void main(String[] args) {
+        MyDate first = new MyDate(24, 12, 2009);
+        MyDate second = new MyDate(1, 1, 2011);
+        MyDate third = new MyDate(25, 12, 2010);
+
+        System.out.println( second + " and " + first + " difference in years: " + second.differenceInYears(first) );
+
+        System.out.println( third + " and " + first + " difference in years: " + third.differenceInYears(first) );
+
+        System.out.println( second + " and " + third + " difference in years: " + second.differenceInYears(third) );
+    }
+}
+
+the output should be:
+
+1.1.2011 and 24.12.2009 difference in years: 2     // since 2011-2009 = 2
+25.12.2010 and 24.12.2009 difference in years: 1   // since 2010-2009 = 1
+1.1.2011 and 25.12.2010 difference in years: 1     // since 2011-2010 = 1
+
+Exercise 92.2: More accuracy
+
+Calculation of the previous version was not very exact, e.g. the difference of dates 1.1.2011 and 25.12.2010 was claimed to be one year. Modify the method so that it can calculate the difference properly. Only the full years in difference count. So if the difference of two dates would be 1 year and 364 days, only the full years are counted and the result is thus one.
+
+The method still needs to work only in the case where the date given as parameter is before the date for which the method is called
+
+The output for the previous example is now:
+
+1.1.2011 and 24.12.2009 difference in years: 1
+25.12.2010 and 24.12.2009 difference in years: 1
+1.1.2011 and 25.12.2010 difference in years: 0
+
+Exercise 92.3: And the final version
+
+Modify the method so that it works no matter which date is later, the one for which the method is called or the parameter. Example code:
+
+public class Main {
+    public static void main(String[] args) {
+        MyDate first = new MyDate(24, 12, 2009);
+        MyDate second = new MyDate(1, 1, 2011);
+        MyDate third = new MyDate(25, 12, 2010);
+
+        System.out.println( first + " and " + second + " difference in years: " + second.differenceInYears(first) );
+        System.out.println( second + " and " + first + " difference in years: " + first.differenceInYears(second) );
+        System.out.println( first + " and " + third + " difference in years: " + third.differenceInYears(first) );
+        System.out.println( third + " and " + first + " difference in years: " + first.differenceInYears(third) );
+        System.out.println( third + " and " + second + " difference in years: " + second.differenceInYears(third) );
+        System.out.println( second + " and " + third + " difference in years: " + third.differenceInYears(second) );
+    }
+}
+
+and the output
+
+24.12.2009 and 1.1.2011 difference in years: 1
+1.1.2011 and 24.12.2009 difference in years: 1
+24.12.2009 and 25.12.2010 difference in years: 1
+25.12.2010 and 24.12.2009 difference in years: 1
+1.1.2011 and 25.12.2010 difference in years: 0
+25.12.2010 and 1.1.2011 difference in years: 0

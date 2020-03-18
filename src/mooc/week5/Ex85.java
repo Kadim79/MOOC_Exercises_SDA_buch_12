@@ -3,74 +3,126 @@ package mooc.week5;
 public class Ex85 {
 
     public static void main(String[] args) {
+        Reformatory eastHelsinkiReformatory = new Reformatory();
 
-        Counter myCounter = new Counter();
-        System.out.println("Counter evolution : " + myCounter.value());
-        myCounter.increase();
-        System.out.println("Counter evolution: " + myCounter.value());
-        myCounter.increase(7);
-        System.out.println("Counter evolution: " + myCounter.value());
-        myCounter.decrease();
-        System.out.println("Counter evolution: " + myCounter.value());
-        myCounter.decrease(3);
-        System.out.println("Counter evolution: " + myCounter.value());
-        myCounter.increase(-7);
-        System.out.println("Counter evolution: " + myCounter.value());
-        myCounter.decrease(-7);
-        System.out.println("Counter evolution: " + myCounter.value());
+        Person brian = new Person("Brian", 1, 110, 7);
+        Person pekka = new Person("Pekka", 33, 176, 85);
+
+        System.out.println(brian.getName() + " weight: " +
+                eastHelsinkiReformatory.weight(brian) + " kilos");
+        System.out.println(pekka.getName() + " weight: " +
+                eastHelsinkiReformatory.weight(pekka) + " kilos");
+
+        eastHelsinkiReformatory.feed(brian);
+        eastHelsinkiReformatory.feed(brian);
+        eastHelsinkiReformatory.feed(brian);
+
+        System.out.println("");
+
+        System.out.println(brian.getName() + " weight: " +
+                eastHelsinkiReformatory.weight(brian) + " kilos");
+        System.out.println(pekka.getName() + " weight: " +
+                eastHelsinkiReformatory.weight(pekka) + " kilos");
+        System.out.println();
+
+        Reformatory eastHelsinkiReformatory1 = new Reformatory();
+
+        Person brian1 = new Person("Brian", 1, 110, 7);
+        Person pekka1 = new Person("Pekka", 33, 176, 85);
+
+        System.out.println("total weights measured " +
+                eastHelsinkiReformatory1.totalWeightsMeasured());
+
+        eastHelsinkiReformatory1.weight(brian1);
+        eastHelsinkiReformatory1.weight(pekka1);
+
+        System.out.println("total weights measured "+
+                eastHelsinkiReformatory1.totalWeightsMeasured());
+
+        eastHelsinkiReformatory1.weight(brian1);
+        eastHelsinkiReformatory1.weight(brian1);
+        eastHelsinkiReformatory1.weight(brian1);
+        eastHelsinkiReformatory1.weight(brian1);
+
+        System.out.println("total weights measured "+
+                eastHelsinkiReformatory1.totalWeightsMeasured());
     }
-
 
 }
 
-class Counter{
+class Reformatory{
 
-    private int counter;
-    private boolean check;
+    private int i;
 
-
-    public Counter() {
-        this.counter = 0;
-        this.check = false;
+    public int weight(Person person) {
+        // returns the weight of the parameter
+        i++;
+        return person.getWeight();
     }
 
-    public Counter(boolean check) {
-        this.counter = 0;
-        this.check = check;
+    public void feed(Person person){
+        person.setWeight(person.getWeight()+1);
     }
 
-    public Counter(int startingValue) {
-        this.counter = startingValue;
-        this.check = false;
+    public int totalWeightsMeasured(){
+        return i;
+    }
+}
+
+
+class Person {
+
+    private String name;
+    private int age;
+    private int height;
+    private int weight;
+
+    public Person(String name,int age,int height,int weight) {
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+        this.height = height;
     }
 
-    public Counter(int startingValue, boolean check) {
-        this.counter = startingValue;
-        this.check = check;
+    public void printPerson() {
+        System.out.println(this.name + " I am " + this.age + " years old");
     }
 
-    public int value(){
-        return counter;
+    public void becomeOlder() {
+        this.age++;
     }
 
-    public void increase(){
-        this.counter +=1;
+    public boolean adult(){
+        return this.age >= 18;
     }
 
-    public void decrease(){
-        if(check == false)
-            counter--;
+    public double weightIndex(){
+        double heightInMeters = this.height/100.0;
+
+        return this.weight / (heightInMeters*heightInMeters);
     }
 
-    public void increase(int increaseAmount){
-        if(increaseAmount>0)
-            counter +=increaseAmount;
+    public String toString(){
+        return this.name + " I am " + this.age + " years old, my weight index is " + this.weightIndex();
     }
 
-    public void decrease(int decreaseAmount){
-
-        if(check == true && decreaseAmount>0 && decreaseAmount < counter )
-            this.counter -= decreaseAmount;
+    public void setHeight(int height){
+        this.height = height;
     }
 
+    public int getHeight(){
+        return this.height;
+    }
+
+    public int getWeight() {
+        return this.weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public String getName(){
+        return this.name;
+    }
 }

@@ -41,37 +41,38 @@ public class Ex78 {
         }
 
     }
+
+    public static class BoundedCounter {
+
+        private int value;
+        private int upperLimit;
+
+        public BoundedCounter(int upperLimit) {
+            this.upperLimit = upperLimit;
+        }
+
+        public void next() {
+            if (this.value <upperLimit)
+                value++;
+            else
+                this.value = 0;
+        }
+
+        public String toString() {
+            if (this.value < 10)
+                return "0" + this.value;
+            else
+                return "" + this.value;
+        }
+
+        public int getValue() {
+            return value;
+        }
+
+        public void setValue(int value) {
+            if(!(value<0 || value>this.upperLimit) )
+            this.value = value;
+        }
+    }
 }
 
-class BoundedCounter {
-
-    private int value;
-    private int upperLimit;
-
-    public BoundedCounter(int upperLimit) {
-        this.upperLimit = upperLimit;
-    }
-
-    public void next() {
-        if (this.value <upperLimit)
-            value++;
-        else
-            this.value = 0;
-    }
-
-    public String toString() {
-        if (this.value < 10)
-            return "0" + this.value;
-        else
-            return "" + this.value;
-    }
-
-    public int getValue() {
-        return value;
-    }
-
-    public void setValue(int value) {
-        if(!(value<0 || value>this.upperLimit) )
-        this.value = value;
-    }
-}

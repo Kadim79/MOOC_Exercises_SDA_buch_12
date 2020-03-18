@@ -13,36 +13,35 @@ public class Ex73_Product {
 
     public static void main(String[] args) {
 
-        Product myProduct = new Product("banana",1.1,11);
+        Product myProduct = new Product("banana", 1.1, 11);
         System.out.println(myProduct);
         myProduct.printProduct();
     }
 
-}
+    public static class Product {
 
-class Product{
+        String nameAtStart;
+        double priceAtStart;
+        double amountAtStart;
 
-    String nameAtStart;
-    double priceAtStart;
-    double amountAtStart;
+        public Product(String nameAtStart, double priceAtStart, double amountAtStart) {
+            this.nameAtStart = nameAtStart;
+            this.priceAtStart = priceAtStart;
+            this.amountAtStart = amountAtStart;
+        }
 
-    public Product(String nameAtStart, double priceAtStart, double amountAtStart){
-        this.nameAtStart=nameAtStart;
-        this.priceAtStart=priceAtStart;
-        this.amountAtStart=amountAtStart;
-    }
+        public void printProduct() {
+            System.out.println(this.nameAtStart + ", price " + this.priceAtStart + ", amount "
+                    + this.amountAtStart);
+        }
 
-    public void printProduct(){
-        System.out.println(this.nameAtStart + ", price "+this.priceAtStart+", amount "
-                + this.amountAtStart);
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "nameAtStart='" + nameAtStart + '\'' +
-                ", priceAtStart=" + priceAtStart +
-                ", amountAtStart=" + amountAtStart +
-                '}';
+        @Override
+        public String toString() {
+            return "Product{" +
+                    "nameAtStart='" + nameAtStart + '\'' +
+                    ", priceAtStart=" + priceAtStart +
+                    ", amountAtStart=" + amountAtStart +
+                    '}';
+        }
     }
 }
