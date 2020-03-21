@@ -15,7 +15,7 @@ public class Ex24_NhlStatics2 {
         while (true) {
 
             System.out.println("");
-            System.out.print("command (points, goals, assists, penalties, player, club, quit): ");
+            System.out.print("Menu options: points, goals, assists, penalties, player, club, quit): ");
             String command = reader.nextLine();
 
             if (command.equals("quit")) {

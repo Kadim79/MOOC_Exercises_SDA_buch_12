@@ -1,6 +1,7 @@
 package mooc.week1.Ex23_Temperature;
 
 import java.util.Scanner;
+import static mooc.week1.Ex23_Temperature.Graph.addNumber;;
 
 public class Temperature {
 
