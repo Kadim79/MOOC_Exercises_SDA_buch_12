@@ -27,22 +27,22 @@ public class Ex85 {
 
         Reformatory eastHelsinkiReformatory1 = new Reformatory();
 
-        Person brian1 = new Person("Brian", 1, 110, 7);
+        Person brian1 = new Person ("Brian", 1, 110, 7);
         Person pekka1 = new Person("Pekka", 33, 176, 85);
 
         System.out.println("total weights measured " +
                 eastHelsinkiReformatory1.totalWeightsMeasured());
 
-        eastHelsinkiReformatory1.weight(brian1);
-        eastHelsinkiReformatory1.weight(pekka1);
+        eastHelsinkiReformatory1.weight(brian);
+        eastHelsinkiReformatory1.weight(pekka);
 
         System.out.println("total weights measured "+
                 eastHelsinkiReformatory1.totalWeightsMeasured());
 
-        eastHelsinkiReformatory1.weight(brian1);
-        eastHelsinkiReformatory1.weight(brian1);
-        eastHelsinkiReformatory1.weight(brian1);
-        eastHelsinkiReformatory1.weight(brian1);
+        eastHelsinkiReformatory1.weight(brian);
+        eastHelsinkiReformatory1.weight(brian);
+        eastHelsinkiReformatory1.weight(brian);
+        eastHelsinkiReformatory1.weight(brian);
 
         System.out.println("total weights measured "+
                 eastHelsinkiReformatory1.totalWeightsMeasured());

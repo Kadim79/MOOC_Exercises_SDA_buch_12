@@ -115,5 +115,17 @@ class MyDate {
                 Math.abs(this.month - comparedDate.month) + " months and " +
                 Math.abs(this.day - comparedDate.day) + " days.";
     }
+
+    public int getDay() {
+        return day;
+    }
+
+    public int getMonth() {
+        return month;
+    }
+
+    public int getYear() {
+        return year;
+    }
 }
 
